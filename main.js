@@ -1,10 +1,13 @@
-import { createElement } from "./mini-react";
+import { createElement, render } from "./mini-react";
 
 const element = createElement(
   "h1",
-  { id: "title", style: { color: "red" } },
+  { id: "title", style: 'background: skyblue; color: red' },
   "Hello ",
   createElement("span", null, "World")
 );
 
-console.log(element);
+
+
+const container = document.querySelector("#root")
+render(element,container)
